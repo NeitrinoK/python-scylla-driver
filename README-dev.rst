@@ -20,6 +20,12 @@ This is necessary for autogenerating the reference documentation of the driver.
 You can find detailed instructions on how to install the driver in the `Installation guide <https://python-driver.docs.scylladb.com/stable/installation.html#manual-installation>`_.
 
 After installing the driver, you can build the documentation:
+
+.. note::
+   This branch removes ``docs/pyproject.toml`` and ``docs/poetry.lock``, so the
+   documentation cannot be built from it. Restore both files from the
+   ``3.28.0-scylla`` tag to build the docs.
+
 - Make sure you have Python version compatible with docs. You can see supported version in ``docs/pyproject.toml`` - look for ``python`` in ``tool.poetry.dependencies`` section.
 - Install poetry: ``pip install poetry``
 - To preview docs in your browser: ``make -C docs preview``
